@@ -4,7 +4,7 @@
   "name": "Xiaolei",
   "userimg": "https://avatars.githubusercontent.com/u/1905307?v=4",
   "sort": "full_name",
-  "order": "asc",
+  "order": "desc",
   "includeFork": false,
   "theme": "dark.css",
   "types": [
