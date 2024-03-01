@@ -1,125 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Lorem ipsum dolor</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div id="loading">
-      <div id="spinner"></div>
-    </div>
-    <a href="/" class="go_back"><i class="fas fa-arrow-left"></i></a>
-    <div id="background_overlay"></div>
-    <div id="background"></div>
-    <table id="profile_blog">
-      <tbody>
-        <tr>
-          <td style="width:8vw;"><div id="profile_img_blog"></div></td>
-          <td style="width:52vw;">
-            <div id="username_blog"></div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div id="blog-display">
-      <h1 id="blog_title">Lorem ipsum dolor</h1>
-      <h2 id="blog_sub_title">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </h2>
-      <div id="blog">
-        <img
-          src="https://images.unsplash.com/photo-1553748024-d1b27fb3f960?w=1450"
-        />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat
-          pretium sem, ac maximus dui sodales a. Nunc aliquet hendrerit turpis
-          ac egestas. Phasellus volutpat tristique maximus.
-          <b>Pellentesque feugiat eget nisi et dignissim.</b> Nam nibh erat,
-          sollicitudin non facilisis nec, scelerisque nec ipsum. Sed accumsan
-          velit condimentum, pharetra felis vitae, commodo tellus.
-          <u><i>Mauris consequat luctus orci.</i></u>
-        </p>
-        <p>
-          Vivamus pharetra lobortis dui non tincidunt. Mauris vitae nisi
-          vestibulum, mollis magna a, maximus mi. Suspendisse dictum eget augue
-          quis sodales. Quisque rutrum ligula nec dapibus tincidunt.
-          <span
-            >Proin hendrerit massa a tellus vestibulum, a hendrerit ipsum
-            iaculis. Suspendisse potenti.</span
-          >
-          Praesent eget erat blandit, finibus sapien vitae, ullamcorper erat.
-          Integer blandit, felis at ullamcorper maximus, odio lectus pretium
-          mauris, vel consequat lectus quam eu risus. Pellentesque gravida nec
-          diam eget vehicula.
-        </p>
-        <img
-          src="https://images.unsplash.com/photo-1556814278-8906c7d3a05f?w=1050"
-        />
-        <p>
-          Donec hendrerit turpis non libero eleifend dignissim. Mauris non
-          tempor metus, et tristique massa. Integer consequat justo quam, vitae
-          aliquam arcu vestibulum at. Donec porttitor quam in tempus convallis.
-          Praesent feugiat eget eros vitae accumsan. Duis ultricies odio quis
-          nisl volutpat, consectetur imperdiet sem laoreet. Quisque maximus
-          semper ligula at tincidunt. Pellentesque accumsan varius vehicula.
-        </p>
-      </div>
-    </div>
-    <div id="footer_blog">
-      <a href="https://github.com/imfunniee" target="_blank"
-        >made on earth by a human</a
-      >
-    </div>
-    <script type="text/javascript">
-      setTimeout(function() {
-        document.getElementById("loading").classList.add("animated");
-        document.getElementById("loading").classList.add("fadeOut");
-        setTimeout(function() {
-          document.getElementById("loading").classList.remove("animated");
-          document.getElementById("loading").classList.remove("fadeOut");
-          document.getElementById("loading").style.display = "none";
-        }, 800);
-      }, 1500);
-      $.getJSON("../../config.json", function(user) {
-        var icon = document.createElement("link");
-        icon.setAttribute("rel", "icon");
-        icon.setAttribute("href", user[0].userimg);
-        icon.setAttribute("type", "image/png");
-        document.getElementsByTagName("head")[0].appendChild(icon);
-        document.getElementById(
-          "profile_img_blog"
-        ).style.background = `url('${user[0].userimg}') center center`;
-        document.getElementById(
-          "username_blog"
-        ).innerHTML = `<span style="display:${
-          user[0].name == null || !user[0].name ? "none" : "block"
-        };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
 
-        if ((user[0].theme = "dark.css")) {
-          document.querySelector("#background_overlay").style.background =
-            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
-        } else {
-          document.querySelector("#background_overlay").style.background =
-            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
-        }
-      });
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notion Style Blog Article</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>A Skeptic's Dive into the Quantum Abyss</h1>
+      <p class="meta">By Xiaolei - February 25, 2024</p>
+    </div>
+
+    <div class="content">
+      <p>The year is 2047. Neon advertisements paint the cityscape in a kaleidoscope of colors, each vying for attention against the backdrop of a perpetual twilight. I, Anya Petrova, huddle in my dimly lit apartment, surrounded by dismantled gadgets and flickering screens, a self-proclaimed bastion of skepticism amidst the techno-utopian frenzy.
+
+        Tonight's subject: "Spectrum Flow." It's all the rage, this supposed revolution in information processing. Quantum AI, entangled particles, the ability to tap into the very fabric of reality – the promises are dizzying. Yet, as an engineer who's seen one too many half-baked miracles fizzle out, I remain unconvinced.
+        
+        The theory goes like this: by manipulating the entanglement of subatomic particles, we can create a network that transcends space and time. Data zooms across the "spectrum," unburdened by the limitations of physics. It's like accessing the collective consciousness of the universe, a shortcut through the very laws of nature.
+        
+        Sounds fantastical, doesn't it? Like something out of a Philip K. Dick novel. And frankly, the more I delve into the research, the more it feels like science fiction masquerading as fact. The equations dance before my eyes, a chaotic ballet of probabilities and wave functions. My trusty slide rule whirs in protest, its gears straining against the weight of these abstract concepts.
+        
+        But I won't deny it, there's a certain allure to Spectrum Flow. The potential for instantaneous communication, unbreakable encryption, and unimaginable processing power is intoxicating. It's the siren song of progress, promising to solve all our problems with a flick of the quantum switch.
+        
+        Yet, the engineer in me remembers the laws of physics. They are not suggestions, but the very foundation of our reality. To bend them, to manipulate the fabric of space and time, feels like playing with fire. What unintended consequences might lurk in the quantum shadows? What if we unravel the threads of reality itself in our quest for a shortcut?
+        
+        The optimists, of course, scoff at my concerns. They call me a Luddite, a relic of a bygone era. They assure me that the safeguards are in place, that the risks are minimal. But their blind faith chills me to the bone. We haven't even fully grasped the implications of artificial intelligence, let alone AI entangled with the very fabric of existence.
+        
+        So, I remain here in my dimly lit haven, surrounded by the comforting hum of logic and the reassuring click of my slide rule. The neon glow of the city outside may beckon, but I choose to wait, to observe, to question. Perhaps I am a skeptic, but in this brave new world, I believe skepticism is the most valuable tool we possess.
+        
+        Is Spectrum Flow the future? Or is it a seductive mirage, leading us down a path of unforeseen dangers? Only time, and perhaps a healthy dose of skepticism, will tell.</p>
+
+      <img src="your-image.jpg" alt="Image description" />
+
+      <p></p>
+    </div>
+
+    <div class="footer">
+      <p>© 2024 Xiaolei Zhu</p>
+    </div>
+  </div>
+</body>
+
 </html>
