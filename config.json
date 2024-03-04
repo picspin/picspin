@@ -3,8 +3,8 @@
   "username": "picspin",
   "name": "Xiaolei",
   "userimg": "https://avatars.githubusercontent.com/u/1905307?v=4",
-  "sort": "full_name",
-  "order": "desc",
+  "sort": "updated",
+  "order": "asc",
   "includeFork": false,
   "theme": "dark.css",
   "types": [
